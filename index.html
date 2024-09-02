@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Tech Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <style>
+        .hero-bg {
+            background: url('https://cdn.pixabay.com/photo/2023/10/24/04/00/ai-generated-8337333_1280.png');
+        }
+        .chart-container {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+        .card {
+            background-color: #1a1a1a;
+            color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .footer {
+            background-color: #000; /* Black background */
+            color: aqua; /* Aqua text color */
+            padding: 70px 0;
+        }
+        .footer-col{
+            flex: 1;
+            padding: 105px;
+            margin-bottom: 0px; 
+            min-width: 200px;
+        }
+        .footer-col h6{
+            font-size: 18px;
+            color:aqua;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 600;
+            position: relative;
+        }
+        .footer-col h6::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color:aqua ;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+            font: bold;
+        }
+        .footer-col p{
+            color: gray;
+        }
+    
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 300;
+            color: gray;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover{
+            color: aqua;
+            padding-left: 8px;
+        }
+        .footer-col .social-links a{
+            display: inline-block;
+            height: 40px;
+            width: 70px;
+            background-color:aqua;
+            margin:0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: black;
+            transition: all 0.5s ease;
+        }
+        .footer-col .social-links a:hover{
+            color: black;
+            background-color: rgb(41, 158, 158);
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-200">
+        <nav class="navbar fixed w-full top-0 left-0 p-4 flex justify-between items-center z-50">
+            <div class="logo">Tech Solutions</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html" class="nav-item active"><i class="fas fa-info-circle"></i> About</a>
+                <a href="services.html" class="nav-item"><i class="fas fa-cogs"></i> Services</a>
+                <a href="apply.html" class="nav-item"><i class="fas fa-edit"></i> Apply</a>
+                <a href="contact.html" class="nav-item"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="login.html" class="nav-item"><i class="fas fa-sign-in-alt"></i> Login</a>
+            </div>
+        </nav>
+
+        <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white bg-cover bg-center relative">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Overlay for better text visibility -->
+            <!-- Direct content placement -->
+            <div class="relative p-8">
+                <h1 class="text-5xl font-bold mb-4 text-aqua-400">Welcome to Tech Solutions</h1>
+                <p class="text-lg mb-6 text-aqua-300">Innovative solutions and services to elevate your tech experience.</p>
+            </div>
+        </section>
+        <section id="how-we-work" class="py-16 bg-gray-800 text-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold text-cyan-400 mb-12">How We Work</h2>
+                <div class="flex flex-wrap justify-center gap-12">
+                    <!-- Step 1 -->
+                    <div class="step bg-gray-700 p-8 rounded-lg shadow-lg max-w-xs mx-auto">
+                        <div class="step-icon mb-4">
+                            <svg class="w-16 h-16 mx-auto text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v8l4 2m-6 6h6a1 1 0 001-1v-5a1 1 0 00-1-1H7a1 1 0 00-1 1v5a1 1 0 001 1h6z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Discovery & Planning</h3>
+                        <p class="text-gray-400">We start by understanding your goals and requirements, ensuring we have a clear vision of the project before moving forward.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="step bg-gray-700 p-8 rounded-lg shadow-lg max-w-xs mx-auto">
+                        <div class="step-icon mb-4">
+                            <svg class="w-16 h-16 mx-auto text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l3 3m-3-3l-3 3m6 6H6a1 1 0 01-1-1V6a1 1 0 011-1h6a1 1 0 011 1v6l4 4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Design & Prototyping</h3>
+                        <p class="text-gray-400">We create detailed designs and prototypes to visualize the final product and gather feedback before development begins.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="step bg-gray-700 p-8 rounded-lg shadow-lg max-w-xs mx-auto">
+                        <div class="step-icon mb-4">
+                            <svg class="w-16 h-16 mx-auto text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 19L6 5m12 14L12 5m0 0L6 11M12 5L18 11"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Development & Testing</h3>
+                        <p class="text-gray-400">Our team develops the product according to the approved designs and conducts rigorous testing to ensure functionality and quality.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="step bg-gray-700 p-8 rounded-lg shadow-lg max-w-xs mx-auto">
+                        <div class="step-icon mb-4">
+                            <svg class="w-16 h-16 mx-auto text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 12L18 12M12 6L18 12M12 18L6 12"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Launch & Support</h3>
+                        <p class="text-gray-400">After a successful launch, we provide ongoing support to address any issues and ensure the product meets your expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonials" class="py-24 min-h-screen bg-gray-900 relative overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center bg-opacity-50" style="background-image: url('https://example.com/testimonials-background.jpg');"></div>
+            <div class="container mx-auto relative text-center text-white z-10">
+                <h2 class="text-4xl font-bold text-cyan-400 mb-12">What Our Clients Say</h2>
+                <div class="relative mt-24"> <!-- Increased margin-top -->
+                    <div class="testimonial-carousel overflow-hidden relative">
+                        <div class="flex transition-transform duration-500 ease-in-out" id="carousel" style="width: 100%;">
+                            <!-- Testimonial 1 -->
+                            <div class="testimonial bg-gray-800 p-8 rounded-xl shadow-xl mx-4 flex-shrink-0 w-full max-w-sm transform transition-transform hover:scale-105">
+                                <div class="client-photo mb-4">
+                                    <img src="https://cdn.pixabay.com/photo/2018/01/22/07/31/portrait-3098319_1280.jpg" alt="Jane Smith" class="w-24 h-24 rounded-full mx-auto border-4 border-cyan-400">
+                                </div>
+                                <p class="text-lg mb-4">"Tech Solutions provided us with outstanding support and innovative solutions. Their team is highly professional and dedicated."</p>
+                                <div class="client-name font-bold text-xl mb-1">Jane Smith</div>
+                                <div class="client-position text-cyan-400">CTO, Innovative Tech</div>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="testimonial bg-gray-800 p-8 rounded-xl shadow-xl mx-4 flex-shrink-0 w-full max-w-sm transform transition-transform hover:scale-105">
+                                <div class="client-photo mb-4">
+                                    <img src="https://cdn.pixabay.com/photo/2018/03/06/22/57/portrait-3204843_1280.jpg" alt="John Doe" class="w-24 h-24 rounded-full mx-auto border-4 border-cyan-400">
+                                </div>
+                                <p class="text-lg mb-4">"An excellent partner for our tech needs. Their expertise and responsiveness have made a significant impact on our business."</p>
+                                <div class="client-name font-bold text-xl mb-1">John Doe</div>
+                                <div class="client-position text-cyan-400">CEO, Future Enterprises</div>
+                            </div>
+                            <!-- Testimonial 3 -->
+                            <div class="testimonial bg-gray-800 p-8 rounded-xl shadow-xl mx-4 flex-shrink-0 w-full max-w-sm transform transition-transform hover:scale-105">
+                                <div class="client-photo mb-4">
+                                    <img src="https://cdn.pixabay.com/photo/2023/11/10/02/30/woman-8378634_1280.jpg" alt="Alice Brown" class="w-24 h-24 rounded-full mx-auto border-4 border-cyan-400">
+                                </div>
+                                <p class="text-lg mb-4">"Their team consistently delivers high-quality work and is always available to address our needs. Highly recommended!"</p>
+                                <div class="client-name font-bold text-xl mb-1">Alice Brown</div>
+                                <div class="client-position text-cyan-400">Head of Product, Tech Innovators</div>
+                            </div>
+                            <!-- Testimonial 4 -->
+                            <div class="testimonial bg-gray-800 p-8 rounded-xl shadow-xl mx-4 flex-shrink-0 w-full max-w-sm transform transition-transform hover:scale-105">
+                                <div class="client-photo mb-4">
+                                    <img src="https://cdn.pixabay.com/photo/2020/03/18/19/03/man-4945224_1280.jpg" alt="Robert Wilson" class="w-24 h-24 rounded-full mx-auto border-4 border-cyan-400">
+                                </div>
+                                <p class="text-lg mb-4">"Exceptional service and innovative solutions that helped us stay ahead of the competition. A pleasure to work with."</p>
+                                <div class="client-name font-bold text-xl mb-1">Robert Wilson</div>
+                                <div class="client-position text-cyan-400">Founder, NextGen Solutions</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-cyan-400 text-black py-2 px-4 rounded-full shadow-xl hover:bg-cyan-500 transition-transform duration-300 ease-in-out">
+                        &#10094;
+                    </button>
+                    <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-cyan-400 text-black py-2 px-4 rounded-full shadow-xl hover:bg-cyan-500 transition-transform duration-300 ease-in-out">
+                        &#10095;
+                    </button>
+                </div>
+            </div>
+        </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h6>Company</h6>
+                    <p>Tech Solutions is a leading provider of innovative technology solutions, dedicated to helping businesses thrive in the digital age. Our expertise spans across various domains, ensuring our clients achieve their goals efficiently and effectively.</p>
+                </div>
+                <div class="footer-col">
+                    <h6>Links to Website</h6>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="apply.html">apply</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div> 
+                <div class="footer-col">
+                    <h6>Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

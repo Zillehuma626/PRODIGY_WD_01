@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Tech Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://media.istockphoto.com/id/1497567120/photo/black-power-button-on-white-background.jpg?s=1024x1024&w=is&k=20&c=XduuiYGtc0DZ6q9S41f6tmnrMEZxLw-NOy3csROa2hU=" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #000; /* Black background for the body */
+            color: #fff; /* White text color */
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            background-color: #000;
+            color: #00FFFF; /* Aqua color */
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 50;
+        }
+        .navbar a {
+            color: #00FFFF;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00FFFF;
+        }
+        .navbar .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+        .navbar .nav-links a.active {
+            background-color: #007B7F; /* Darker aqua */
+            color: #fff;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            gap: 2rem;
+            flex-wrap: wrap; /* Ensure responsiveness */
+        }
+        .contact-image {
+            background: url('https://cdn.pixabay.com/photo/2019/05/10/14/23/contact-us-4193637_1280.jpg') no-repeat center center;
+            background-size: cover;
+            height: 300px; /* Adjust as needed */
+            width: 100%; /* Full width on smaller screens */
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .contact-info {
+            flex: 1;
+            max-width: 66.66%;
+            
+        }
+        .contact-form {
+            flex: 1;
+            max-width: 33.33%; /* Full width on smaller screens */
+        }
+        .form-container {
+            background-color: #1a1a1a;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 600px;
+        }
+       .contact-form input, .contact-form textarea {
+            width: 100%;
+            background: none;
+            border: none;
+            border-bottom: 2px solid white; /* Aqua bottom border */
+            color: #fff;
+            padding: 0.75rem 0;
+            font-size: 0.875rem; /* Smaller font size */
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-bottom: 2px solid #007B7F; /* Darker aqua on focus */
+        }
+        .contact-form textarea {
+            resize: none;
+            height: 100px; /* Adjust as needed */
+        }
+        .contact-form button {
+            width: 100%; /* Full width button */
+            background-color: #00FFFF; /* Aqua background color */
+            color: #fff; /* White text color */
+            border: none;
+            border-radius: 50px; /* Oval shape */
+            cursor: pointer;
+            font-weight: bold;
+            padding: 0.75rem; /* Adjusted padding */
+            font-size: 0.875rem; /* Smaller font size */
+        }
+        .contact-form button:hover {
+            background-color: #007B7F; /* Darker aqua on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar fixed w-full top-0 left-0">
+        <div class="logo">Tech Solutions</div>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            <a href="services.html"><i class="fas fa-cogs"></i> Services</a>
+            <a href="apply.html"><i class="fas fa-edit"></i> Apply</a>
+            <a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="login.html" class="nav-item"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </div>
+    </nav>
+    
+    <div class="contact-container mt-20 px-4">
+        <div class="contact-info flex flex-col items-center text-center">
+            <h1 class="text-4xl font-bold text-cyan-400 mb-6">Contact Us</h1>
+            <p class="text-lg text-gray-400 mb-6">Any questions or remarks ? Just write us a message!</p>
+            <div class="contact-image mb-8"></div> <!-- Background image section -->
+            <p class="text-lg text-gray-400 mb-6">Address: 123 Tech Avenue, Suite 100, Silicon Valley, CA 94043</p>
+        </div>
+        <div class="contact-form">
+            <h2 class="text-4xl font-bold mb-6">Get in Touch</h2>
+            <p class="text-lg text-gray-400 mb-6">Fill out the form below to contact our team...</p>
+            <div class="form-container">
+                <form action="#" method="post">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-400 font-bold mb-2">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-400 font-bold mb-2">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="your-email@example.com" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-400 font-bold mb-2">How Can We Help You?</label>
+                        <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                    </div>
+                    <div class="flex justify-center">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h6>Company</h6>
+                    <p>Tech Solutions is a leading provider of innovative technology solutions, dedicated to helping businesses thrive in the digital age. Our expertise spans across various domains, ensuring our clients achieve their goals efficiently and effectively.</p>
+                </div>
+                <div class="footer-col">
+                    <h6>Links to Website</h6>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="apply.html">apply</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div> 
+                <div class="footer-col">
+                    <h6>Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+

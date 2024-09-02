@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+.navbar {
+    background-color: #000;
+    color: #00FFFF; /* Aqua color */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 50;
+}
+.navbar a {
+    color: #00FFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00FFFF;
+}
+.navbar .nav-links {
+    display: flex;
+    gap: 1rem;
+}
+.navbar .nav-links a.active {
+    background-color: #007B7F; /* Darker aqua */
+    color: #fff;
+}
+.container {
+    margin-top: 4rem; /* Adjust for fixed header */
+}
+
+.container h1, .container p {
+    margin: 1rem 0;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+.footer {
+    background-color: #000; /* Black background */
+    color: aqua; /* Aqua text color */
+    padding: 70px 0;
+}
+.footer-col{
+    flex: 1;
+    padding: 105px;
+    margin-bottom: 0px; 
+    min-width: 200px;
+}
+.footer-col h6{
+    font-size: 18px;
+    color:aqua;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 600;
+    position: relative;
+}
+.footer-col h6::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color:aqua ;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+    font: bold;
+}
+.footer-col p{
+    color: gray;
+}
+    
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 300;
+    color: gray;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: aqua;
+    padding-left: 8px;
+}
+.footer-col .social-links {
+    display: flex;
+    gap: 0.5rem; /* Adjust the spacing between the icons if needed */
+    justify-content: center; /* Center the icons horizontally */
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 70px;
+    background-color:aqua;
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: black;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: black;
+    background-color: rgb(41, 158, 158);
+}
+body {
+    line-height: 1.5;
+    font-family: 'Poppins',sans-serif;
+}
+.card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem 0;
+    color: #fff;
+    max-width: 1200px;
+    margin: auto;
+}
+.card h2 {
+    color: #00FFFF;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.timeline {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #00FFFF;
+    transform: translateX(-50%);
+}
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1rem;
+    background: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+}
+.timeline-item-left {
+    margin-right: 50%;
+    text-align: right;
+    padding-right: 2rem;
+}
+.timeline-item-right {
+    margin-left: 50%;
+    text-align: left;
+    padding-left: 2rem;
+}
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    width: 12px;
+    height: 12px;
+    background: #00FFFF;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.timeline-item:nth-child(even):before {
+    left: auto;
+    right: -6px;
+}
+.timeline-item h3 {
+    color: #00FFFF;
+    font-size: 1.25rem;
+    margin-top: 0;
+}
+.timeline-item p {
+    color: #fff;
+    margin: 0.5rem 0 0;
+}
+.values-section {
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+}
+
+.values-section h2 {
+    color: #00FFFF;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.values-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.value-card {
+    background: #333;
+    border-radius: 8px;
+    padding: 2rem;
+    width: calc(50% - 1rem); /* Two cards per row with space between */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.value-card i {
+    font-size: 3rem;
+    color: #00FFFF;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    color: #00FFFF;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.value-card p {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.value-card:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+/* Add this CSS to your existing stylesheet or within a <style> block if needed */
+
+.testimonial-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#carousel {
+    display: flex;
+    width: 400%; /* Adjust width to accommodate all items */
+}
+
+.testimonial {
+    width: 100%;
+    max-width: 100%; /* Adjust as needed */
+}
+.step-icon svg {
+    color: aqua; /* Use a color that matches your theme */
+}
